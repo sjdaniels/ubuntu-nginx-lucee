@@ -24,6 +24,8 @@ cp /opt/lucee/tomcat/conf/server.xml /opt/lucee/tomcat/conf/server.xml-orig-back
 #copy our server.xml to tomcat dir
 cp etc/lucee/server.xml /opt/lucee/tomcat/conf
 
+sudo chown deploy:deploy /opt/lucee/tomcat/conf/server.xml
+
 echo "... Restarting Lucee ..."
 sudo service lucee_ctl restart > /dev/null
 
