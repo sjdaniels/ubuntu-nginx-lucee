@@ -27,6 +27,10 @@ separator
 ./scripts/200-lucee.sh
 separator
 
+#download commandbox
+./scripts/250-commandbox.sh
+separator
+
 #install nginx
 ./scripts/500-nginx.sh
 separator

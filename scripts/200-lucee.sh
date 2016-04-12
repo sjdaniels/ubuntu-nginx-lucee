@@ -19,6 +19,14 @@ sudo mv /opt/lucee/tomcat/bin/setenv.sh /opt/lucee/tomcat/bin/setenv.sh.pkg
 sudo cp etc/lucee/setenv.sh /opt/lucee/tomcat/bin
 sudo cp etc/lucee/lucee-server.xml /opt/lucee/tomcat/lucee-server/context
 
+#backup default server.xml
+cp /opt/lucee/tomcat/conf/server.xml /opt/lucee/tomcat/conf/server.xml-orig-backup
+#copy our server.xml to tomcat dir
+cp etc/lucee/server.xml /opt/lucee/tomcat/conf
+
+echo "... Restarting Lucee ..."
+sudo service lucee_ctl restart > /dev/null
+
 echo "... Installing MongoDB Extension ..."
 sudo cp -R etc/lucee/mongodb-extension-modern/* /opt/lucee/tomcat/lucee-server/deploy/
 
