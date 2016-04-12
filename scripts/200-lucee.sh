@@ -26,8 +26,6 @@ cp etc/lucee/server.xml /opt/lucee/tomcat/conf
 
 sudo chown deploy:deploy /opt/lucee/tomcat/conf/server.xml
 
-echo "... Restarting Lucee ..."
-sudo service lucee_ctl restart > /dev/null
 
 echo "... Installing MongoDB Extension ..."
 sudo cp -R etc/lucee/mongodb-extension-modern/* /opt/lucee/tomcat/lucee-server/deploy/
@@ -46,3 +44,5 @@ sed -i "s/SHARED-KEY-HERE/$shared_secret/g" /opt/lucee/tomcat/conf/server.xml
 # echo "Setting Permissions on Lucee Folders"
 # chown -R deploy:deploy /opt/lucee
 # chmod -R 750 /opt/lucee
+echo "... Restarting Lucee ..."
+sudo service lucee_ctl restart > /dev/null
