@@ -7,7 +7,7 @@ echo "BEGIN installing and configuring Lucee ..."
 if [ ! -d "/opt/lucee" ]; then
 
 	echo "... Downloading the Lucee installer, standby ..."
-	wget $LUCEE_INSTALLER ~/lucee.run &> /dev/null
+	wget -O ~/lucee.run $LUCEE_INSTALLER
 	
 	sudo chmod +x ~/lucee.run
 	echo "... Installing Lucee ..."
