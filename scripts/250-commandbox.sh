@@ -5,8 +5,8 @@ echo " "
 echo "BEGIN installing and configuring CommandBox ..."
 
 
-#echo "Install prerequisite JRE ..."
-#sudo apt-get install default-jre
+echo "Install prerequisite JRE ..."
+sudo apt-get install default-jre
 
 echo "Add Ortus Solutions Key"
 sudo gpg --keyserver keys.gnupg.net --recv-key 6DA70622
