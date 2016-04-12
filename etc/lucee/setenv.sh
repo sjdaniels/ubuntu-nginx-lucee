@@ -1,0 +1,4 @@
+#!/bin/sh
+
+CATALINA_OPTS="$JAVA_OPTS -Xms2G -Xmx3G ";
+export CATALINA_OPTS;
