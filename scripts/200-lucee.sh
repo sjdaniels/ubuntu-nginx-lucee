@@ -26,6 +26,13 @@ cp etc/lucee/server.xml /opt/lucee/tomcat/conf
 
 sudo chown deploy:deploy /opt/lucee/tomcat/conf/server.xml
 
+if [ ! -d "/opt/fusionreactor" ]; then
+	echo "... Installing FusionReactor ..."
+	sudo cp -R etc/fr /opt/fusionreactor
+	sudo ln -s /opt/fusionreactor/etc/lib/fusionreactor.jar /opt/lucee/tomcat/lib
+	sudo ln -s /opt/fusionreactor/etc/lib/libFusionReactor-linux-x86_64.so /usr/lib
+	sudo cp -f etc/lucee/web.xml /opt/lucee/tomcat/conf/web.xml
+fi
 
 echo "... Installing MongoDB Extension ..."
 sudo cp -R etc/lucee/mongodb-extension-modern/* /opt/lucee/tomcat/lucee-server/deploy/
