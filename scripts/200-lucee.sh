@@ -32,6 +32,9 @@ if [ ! -d "/opt/fusionreactor" ]; then
 	sudo ln -s /opt/fusionreactor/etc/lib/fusionreactor.jar /opt/lucee/tomcat/lib
 	sudo ln -s /opt/fusionreactor/etc/lib/libFusionReactor-linux-x86_64.so /usr/lib
 	sudo cp -f etc/lucee/web.xml /opt/lucee/tomcat/conf/web.xml
+	
+	sudo chown deploy:deploy /opt/lucee/tomcat/conf/web.xml
+	sudo chown deploy:deploy /opt/fusionreactor -R
 fi
 
 echo "... Installing MongoDB Extension ..."
