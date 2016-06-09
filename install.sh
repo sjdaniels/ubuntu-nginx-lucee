@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #configuration options
-export LUCEE_INSTALLER="http://railo.viviotech.net/downloader.cfm/id/149/file/lucee-5.0.0.219-RC-pl0-linux-x64-installer.run"
+export LUCEE_INSTALLER="http://cdn.lucee.org/downloader.cfm/id/155/file/lucee-5.0.0.252-pl0-linux-x64-installer.run"
 
 #root permission check
 if [ "$(whoami)" != "root" ]; then
